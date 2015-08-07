@@ -1,0 +1,28 @@
+
+ <head>
+    <title>LEDpi</title>
+  	<script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script> 
+  </head>
+  <body>
+    <h1>LEDpi</h1>
+    <form>
+    	<input type="button" value="On" onclick="LEDon()" style="font-size:200%;"><br />
+    	<input type="button" value="Off" onclick="LEDoff()" style="font-size:200%;">
+    </form>
+    <script type="text/javascript">
+      function LEDon() {
+	    new Ajax.Request('cgi-bin/LEDon.py', 
+	    	{method: 'GET'}
+        );
+      }
+    </script>
+    <script type="text/javascript">
+      function LEDoff() {
+	    new Ajax.Request('cgi-bin/LEDoff.py', 
+	    	{method: 'GET'}
+        );
+      }
+    </script>
+  </body>
+</html>
+
